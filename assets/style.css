@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    background-color: #fff;
+    overflow: auto;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+hr {
+    border: solid 1px;
+    border-radius: 50%;
+}
+
+.ti {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#navbar * {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#navbar {
+    background-color: #228043;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+#navbar ul {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#navbar ul a:hover {
+    font-weight: bold;
+}
+
+#navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0px 2px 10px #000;
+}
+
+#navbar_brand {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+#navbar ul li a {
+    position: relative;
+    padding: 10px 0;
+}
+
+#navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+#navbar ul li a:hover::before {
+    width: 50%;
+    transition: all 0.2s;
+}
+
+#navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.2s;
+}
+
+#navbar ul li a:hover::after {
+    width: 50%;
+    transition: all 0.2s;
+}
+
+.bg-header {
+    min-height: 100vh;
+    position: relative;
+    background: url('images/5.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: -3;
+}
+
+.bg-header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: -2;
+}
+
+.caption .text1,
+.caption .text2 {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bolder;
+    z-index: -3;
+}
+
+.caption .text1 {
+    margin: 0;
+    top: -20px;
+    font-size: 120px;
+    text-shadow: 3px 2px 8px #000;
+}
+
+.caption .text2 {
+    margin-top: 80px;
+    top: 0;
+    font-variant: small-caps;
+    font-size: 30px;
+    letter-spacing: 5px;
+    word-spacing: 40px;
+    text-shadow: 2px 2px 3px #000;
+}
+
+.button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #228043;
+}
+
+.button a {
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.arrow {
+    position: absolute;
+    top: 20%;
+    border: solid #fff;
+    border-width: 0 .18em .18em 0;
+    display: inline-block;
+    padding: .15em;
+    transform:rotate(45deg);  
+    -webkit-transform:rotate(45deg);
+}
+
+.button a:hover .arrow {
+    top: 35%;
+}
+
+article h2 {
+    margin: 0;
+}
+
+.bg_hero {
+    position: relative;
+    width: 100%;
+    padding: 0% 10% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #10403B;
+    color: #fff;
+    text-align: center;
+}
+
+.judul {
+    font-size: 2.5rem;
+    font-weight: normal;
+    padding: 7% 0 30px;
+    text-align: center;
+}
+
+#hero_ti {
+    font-size: 5rem;
+}
+
+.container p{
+    margin-top: 3%;
+    line-height: 1.5;
+}
+
+.bg_light {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5%;
+    background-color: #fff;
+}
+
+.bg_dark {
+    position: relative;
+    width: 100%;
+    padding-bottom: 5%;
+    background-color:  #F6F6F6;
+}
+
+#profile {
+    position: relative;
+    width: 100%;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container table {
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 35px;
+    border-collapse: collapse;
+    
+}
+
+.container th {
+    text-align: left;
+    vertical-align: bottom;
+    height: 50px;
+    padding: 0 30px 0 20px;
+}
+
+.container tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.container #td_akreditas {
+    border-bottom: hidden;
+}
+
+.container td {
+    vertical-align: bottom;
+}
+
+.profile-row-dua {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.card-profile {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width: 400px;
+    padding: 20px;
+    margin: 0 30px;
+    text-align: center;
+}
+
+.card-profile h2,
+.card-profile figcaption {
+    margin-top: 20px;
+}
+
+.card-profile img {
+    width: 250px;
+    border-radius: 15% 25% 15% 25%;
+    
+}
+
+.card-profile #sekprodi {
+    width: 250px;
+    border-radius: 25% 15% 25% 15%;
+}
+
+.visi-row {
+    display: flex;
+    text-align: justify;
+}
+
+.visi-row .col {
+    margin: 0 5% 0;
+}
+
+.visi-row .col h3 {
+    text-align: center;
+}
+
+#kontak h3 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.kontak-row {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.kontak-col figure {
+    margin: 0;
+}
+
+.kontak-row .kontak-col {
+    flex-basis: 25%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.card-kontak hr {
+    margin: 0 80px 50px;
+}
+
+#aboutme img {
+    width: 150px;
+    border-radius: 25% 10% 25% 10%;
+}
+
+#aboutme th {
+    text-align: left;
+    padding-right: 30px;
+}
+
+#aboutme header{
+    text-align: center;
+}
+
+#itbu-kontak {
+    float: left;
+    width: 60%;
+    margin-left: 20px;
+}
+
+aside {
+    float: right;
+    width: 38%;
+    padding: 0 20px 50px;
+}
+
+.img-footer {
+    position: relative;
+    height: 280px;
+    margin-bottom: 0;
+    background: url('images/2.jpg') no-repeat bottom;
+    background-size: contain;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#pre-footer {
+    position: relative;
+    background-color: #9EA1A3;
+    width: 100%;
+    padding: 25px;
+}
+
+.sosmed {
+    position: absolute;
+    margin-right: 30px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    display: flex;
+}
+
+.fb,
+.ig,
+.tw {
+    margin-right: 10px;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    top: 0;
+}
+
+.fb img,
+.ig img,
+.tw img {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.fb .fb1:hover,
+.ig .ig1:hover,
+.tw .tw1:hover {
+    opacity: 0;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background-color: #228043;
+}
+
+footer a {
+    color: #fff;
+}
+
+#footer_brand {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    left: 50px;
+}
+
+#footer_brand_ti {
+    font-size: 1.3em;
+}
+
+#footer_nav {
+    margin: 0 0 0 200px;
+}
+
+#footer_nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#footer_nav li {
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+#footer_nav li a:hover {
+    text-decoration: underline;
+}
+
+#footer_mark {
+    margin: 10px 0 0 200px;
+    color: #fff;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+@media screen and (max-width:1300px){
+    .img-footer {
+        height: 180px;
+    }
+
+    #navbar ul {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .caption .text1 {
+        font-size: 140px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .caption .text2 {
+        top: 60px;
+    }
+
+    #itbu-kontak,
+    aside {
+        width: 100%;
+    }
+
+    #kontak {
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+
+    aside {
+        margin-top: 40px;
+    }
+
+    aside table {
+        margin: 0 auto;
+    }
+
+    .img-footer {
+        height: 130px;
+    }
+
+    #navbar ul {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .judul {
+        font-size: 2.5em;
+        font-weight: normal;
+        padding: 7% 0 30px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .profile-row-dua {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-profile {
+        margin: 20px auto;
+    }
+
+    #hero_ti {
+        font-size: 4rem;
+    }
+
+    .img-footer {
+        background: url('images/2.jpg') no-repeat top;
+        background-size: cover;
+    }
+
+    #navbar ul {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    #footer_nav ul{
+        flex-direction: column;
+        line-height: 1.5;
+        margin-left: 40%;
+    }
+
+    #footer_brand {
+        margin: 0;
+        padding: 0;
+        font-size: 32px;
+        left: 20%;
+        top: 40%;
+        transform: translate(0, -50%);
+    }
+
+    #footer_mark {
+        margin: 10px 0 0 20%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .caption .text1 {
+        font-size: 90px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .caption .text2 {
+        top: 10px;
+        font-size: 26px;
+        letter-spacing: 3px;
+        word-spacing: 20px;
+    }
+
+    .kontak-col figcaption {
+        font-size: 14px;
+    }
+
+    #navbar ul {
+        width: 45%;
+        font-size: small;
+    }
+
+    #footer_mark {
+        margin: 10px 0 0 10%;
+    }
+
+    #footer_brand {
+        font-size: 28px;
+        left: 15%;
+        top: 40%;
+        transform: translate(0, -50%);
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .caption .text1 {
+        font-size: 60px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .caption .text2 {
+        top: 0;
+        font-size: 24px;
+        letter-spacing: 3px;
+        word-spacing: 8px;
+    }
+
+    #hero_ti {
+        font-size: 3rem;
+    }
+
+    .kontak-col figcaption {
+        font-size: 12px;
+    }
+}
+
